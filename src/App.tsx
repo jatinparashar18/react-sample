@@ -9,7 +9,7 @@ import {
   AlertDialogTrigger,
 } from "./components/ui/alert-dialog";
 import { Button } from "./components/ui/button";
-import { Plus, Users2 } from "lucide-react";
+import { Users2 } from "lucide-react";
 import UserForm from "./components/user/UserForm";
 
 function App() {
@@ -39,7 +39,6 @@ function App() {
                 <AlertDialogTrigger asChild>
                   <Button className="bg-white hover:bg-slate-50 text-slate-900 font-semibold px-6 py-2.5 flex items-center gap-2 shadow-sm border-0 cursor-pointer">
                     Add New User
-                    {/* <Plus className="w-5 h-5" /> */}
                   </Button>
                 </AlertDialogTrigger>
                 <AlertDialogContent className="max-w-2xl bg-white rounded-2xl shadow-xl border border-slate-200 p-0 overflow-hidden">
