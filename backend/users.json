@@ -1,0 +1,42 @@
+[
+  {
+    "id": "5a70a98e-b186-40d1-bfad-1ffdea698d64",
+    "name": "John Doe",
+    "email": "john@example.com",
+    "phone": "+1-555-0123",
+    "address": "123 Main St, New York, NY",
+    "createdAt": "2024-01-15T00:00:00.000Z"
+  },
+  {
+    "id": "97fbde96-fa99-4aff-b7d0-5b4a3efa6020",
+    "name": "Jane Smith",
+    "email": "jane@example.com",
+    "phone": "+1-555-0456",
+    "address": "456 Oak Ave, Los Angeles, CA",
+    "createdAt": "2024-01-20T00:00:00.000Z"
+  },
+  {
+    "id": "9c0e7fbc-6877-4641-b33d-1502210760c3",
+    "name": "Jatin Parashar",
+    "email": "parashar18jatin@gmail.com",
+    "phone": "8920124609",
+    "address": "143/18",
+    "createdAt": "2025-07-01T16:47:02.073Z"
+  },
+  {
+    "id": "f27ab8bf-20c1-47f9-9d7d-1365bd933a0f",
+    "name": "hello",
+    "email": "p@gfma.com",
+    "phone": "1",
+    "address": "12",
+    "createdAt": "2025-07-01T17:04:24.439Z"
+  },
+  {
+    "id": "d17b4bbd-d224-450e-98a2-1e55ae326ea6",
+    "name": "Jatin Parasharjatin",
+    "email": "corrections@g.com",
+    "phone": "8920124609",
+    "address": "143/18 Friends Colony, Gurgaon",
+    "createdAt": "2025-07-01T18:01:49.005Z"
+  }
+]
