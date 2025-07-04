@@ -1,71 +1,42 @@
-import { useState } from "react";
 import UsersList from "./components/user/UsersList";
-import {
-  AlertDialog,
-  AlertDialogContent,
-  AlertDialogDescription,
-  AlertDialogHeader,
-  AlertDialogTitle,
-  AlertDialogTrigger,
-} from "./components/ui/alert-dialog";
-import { Button } from "./components/ui/button";
 import { Users2 } from "lucide-react";
-import UserForm from "./components/user/UserForm";
+import UserFormModal from "./components/user/UserFormModal";
+import { Toaster } from "sonner";
 
 function App() {
-  const [isModalOpen, setIsModalOpen] = useState(false);
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-slate-100 to-slate-200">
-      <div className="container mx-auto px-4 py-8">
-        <div className="bg-white rounded-2xl shadow-sm border border-slate-200 max-w-7xl mx-auto overflow-hidden">
-          <div className="bg-slate-900 px-8 py-6">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-white rounded-xl flex items-center justify-center">
-                  <Users2 className="w-6 h-6 text-slate-900" />
+    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 px-4 py-8">
+      <div className="container mx-auto max-w-7xl">
+        <div className="bg-white/80 backdrop-blur-md rounded-3xl shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] border border-slate-200 overflow-hidden">
+          <div className="relative bg-gradient-to-r from-slate-900 via-slate-900 to-slate-900 px-8 py-10 rounded-t-3xl overflow-hidden">
+            <div className="relative z-10 flex items-center justify-between">
+              <div className="flex items-center gap-6">
+                <div className="w-16 h-16 bg-gradient-to-br from-white to-slate-100 rounded-2xl flex items-center justify-center shadow-md ring-4 ring-white/10">
+                  <Users2 className="w-8 h-8 text-slate-800" />
                 </div>
                 <div>
-                  <h1 className="text-2xl font-bold text-white">
+                  <h1 className="text-3xl font-bold text-white tracking-tight">
                     User Management
                   </h1>
-                  <p className="text-slate-300 text-sm mt-1">
-                    Manage and organize your user accounts
+                  <p className="text-slate-300 text-base mt-1">
+                    Organize and manage all your users effortlessly
                   </p>
                 </div>
               </div>
-
-              <AlertDialog open={isModalOpen} onOpenChange={setIsModalOpen}>
-                <AlertDialogTrigger asChild>
-                  <Button className="bg-white hover:bg-slate-50 text-slate-900 font-semibold px-6 py-2.5 flex items-center gap-2 shadow-sm border-0 cursor-pointer">
-                    Add New User
-                  </Button>
-                </AlertDialogTrigger>
-                <AlertDialogContent className="max-w-2xl bg-white rounded-2xl shadow-xl border border-slate-200 p-0 overflow-hidden">
-                  <div className="bg-slate-50 px-6 py-4 border-b border-slate-200">
-                    <AlertDialogHeader>
-                      <AlertDialogTitle className="text-xl font-bold text-slate-900">
-                        Create New User
-                      </AlertDialogTitle>
-                      <AlertDialogDescription className="text-slate-600 mt-1">
-                        Fill in the details below to add a new user account to
-                        the system.
-                      </AlertDialogDescription>
-                    </AlertDialogHeader>
-                  </div>
-                  <div className="p-6">
-                    <UserForm onClose={() => setIsModalOpen(false)} />
-                  </div>
-                </AlertDialogContent>
-              </AlertDialog>
+              <div className="flex items-center gap-3">
+                <UserFormModal />
+              </div>
             </div>
           </div>
 
-          <div className="p-8">
-            <UsersList />
+          <div className="p-8 bg-gradient-to-b from-white to-slate-50">
+            <div className="bg-white rounded-2xl shadow-xl border border-slate-200 p-6">
+              <UsersList />
+            </div>
           </div>
         </div>
       </div>
+      <Toaster position="top-center" richColors />
     </div>
   );
 }
