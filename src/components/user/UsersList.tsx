@@ -56,7 +56,6 @@ const UsersList: React.FC = () => {
   const [sortBy, setSortBy] = useState<"name" | "email" | "createdAt">("name");
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
   const [editingUser, setEditingUser] = useState<any>(null);
-  // const [userToDelete, setUserToDelete] = useState<string | null>(null);
   const { users, loading, fetchError, deleteError } = useAppSelector(
     (state) => state.user
   );
